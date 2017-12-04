@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="format-delection" content="telephone=no">
+	<meta name="format-delection" content="email=no">
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/success.css" type="text/css">
+	<link rel="stylesheet" href="../css/font-awesome.css" type="text/css">
+</head>
+<body>
+	<div class="container">
+		<p class="img">预定成功！</p>
+		<p class="info"><span id="surname"></span>先生(女士),您于<span id="date_in"></span>在<span id="hotel_name"></span>预定了<span id="home_num"></span>间<span id="home_type"></span>,稍后你将收到手机短信,请注意查收!</p>
+		<p class="btns">
+			<a href="#" id="seeIndentBtn">查看订单详情</a><a href="#" id="backIndexBtn">返回酒店首页</a>
+		</p>
+	</div>
+	<section class="indentInfo">
+		<span class="close" id="close">X</span>
+		<p>姓　　名:<input type="text" onlyReady id="userName"></p>
+		<p>酒店名称:<input type="text" onlyReady id="hotelName"></p>
+		<p>酒店地址:<input type="text" onlyReady id="hotelAddr"></p>
+		<p>入住日期:<input type="text" onlyReady id="dateIn"></p>
+		<p>离店日期:<input type="text" onlyReady id="dateOut"></p>
+		<p>酒店星级:<input type="text" onlyReady id="hotelStar"></p>
+		<p>房间类型:<input type="text" onlyReady id="homeType"></p>
+		<p>房间数量:<input type="text" onlyReady id="homeSum"></p>
+		<p>房间价格:<input type="text" onlyReady id="homePrice"></p>
+		<p>房间信息:<input type="text" onlyReady id="homeInfo"></p>
+		<p>房 间 号:<input type="text" onlyReady id="homeNum"></p>
+		<p>联系电话:<input type="text" onlyReady id="userTel"></p>
+		<p class="img">预定成功！</p>
+	</section>
+	<script type="text/javascript" src="../js/zepto.min.js"></script>
+	<script type="text/javascript" src="../js/comment.js"></script>
+	<script type='text/javascript' src="../js/success.js"></script>
+</body>
+</html>

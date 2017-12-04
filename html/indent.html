@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="format-delection" content="telephone=no">
+	<meta name="format-delection" content="email=no">
+	<title>Document</title>
+	<link rel="stylesheet" href="../gmu/css/calendars.css">
+	<link rel="stylesheet" href="../css/indent.css" type="text/css">
+	<link rel="stylesheet" href="../css/font-awesome.css" type="text/css">
+</head>
+<body>
+	<div class="container">
+		<header class="header">
+			<a href="#">&lt;</a>
+			<h1>订单填写</h1>
+		</header>
+		<main class="main">
+			<section>
+				<section class="hotelInfo">
+					<dl>
+						<dt><img src="../img/01.jpg"></dt>
+						<dd>
+							<h2 class="hotelName"></h2>
+							<p class="homeName"></p>
+							<p class="homePrice"></p>
+						</dd>
+					</dl>
+					<section class="timeInfo">
+						<p>入住 <span class="in"></span><input type="hidden" id="date_in"></p>
+						<p>离店 <span class="in"></span><input type="hidden" id="date_in"></p>
+					</section>
+				</section>	
+				<section class="homeInfo">
+					<h3>房间信息</h3>
+					<section class="a">
+						<section class="homeNum">
+							<a href="#"><span><button id="homeNumBack">-</button><input type="text" id="homeNum" value="1"><button id="homeNumAdd">+</button></span>&gt;</a>房间信息
+						</section>
+						<section class="homeTime">
+							<a href="#"><span>19:00前</span>&gt;</a>到店时间
+						</section>	
+					</section>
+				</section>
+				<section class="userInfo">
+					<h3>入住人信息</h3>
+					<section class="user">
+						
+					</section>
+				</section>
+				<section class="linkmanInfo">
+					<h3>联系人信息</h3>
+					<section class="linkman">
+						<p class="linkmanName">姓名<input type="text" placeHolder="联系人姓名" id="lineName"><span class="closeInputBtn">x</span></p>
+						<p class="linkmanTel">手机<input type="text" placeHolder="用于接受通知短信" id="lineTel"><span class="closeInputBtn">x</span></p>
+					</section>
+				</section>
+				<section class="promptInfo">
+					<h4>温馨提示:</h4>
+					<p>当前房间紧张,需冻结您的信用卡金额90元用于担保订单,如订单不确定我们将立即进行解冻。该订单确认后不可被取消修改。若未入住或取消修改，担保费用将不予退还。</p>
+				</section>
+				<section class="submitBtns">
+					<button class="assureBtn">担保交易:￥90</button><button class="scheduleBtn" id="scheduleBtn">立即预定</button>
+				</section>
+			</section>
+		</main>
+	</div>
+	<script type="text/javascript" src="../js/zepto.min.js"></script>
+	<script type="text/javascript" src="../js/comment.js"></script>
+	<script type="text/javascript" src="../js/indent.js"></script>
+</body>
+</html>

@@ -1,0 +1,403 @@
+@charset "utf-8";
+
+*{
+	margin:0px;
+	padding:0px;
+}
+
+*,*:before,*:after{
+	-webkit-box-sizing:border-box;
+}
+
+a{
+	text-decoration:none;
+}
+
+ul,ol li{
+	list-style:none;
+}
+
+img{
+	vertical-align:middle;
+}
+
+@mixin full{
+	width:100%;
+	height:100%
+}
+
+@mixin pos($val:relative)
+{
+	position:$val;
+}
+
+@mixin flex($val:row)
+{
+	display:-webkit-flex;
+	-webkit-flex-direction:$val;
+}
+
+html,body,.container{
+	@include full;
+	overflow:hidden;
+}
+
+.container{
+	@include flex(column);
+	@include pos;
+}
+
+.info_mark{
+	@include pos(absolute);
+	@include full;
+	left:0px;
+	top:0px;
+	background:rgba(0,0,0,0.6);
+	z-index:999;
+}
+
+.info_img{
+	background-color:#fff;
+	border-radius:5px;
+	width:60px;
+	height:60px;
+	@include pos(absolute);
+	z-index:1000;
+	left:0px;
+	right:0px;
+	top:0px;
+	bottom:0px;
+	margin:auto;
+	img{
+		@include full;
+	}
+}
+
+.info_error{
+	background-color:#fff;
+	border-radius:5px;
+	width:200px;
+	height:100px;
+	@include pos(absolute);
+	z-index:1000;
+	left:0px;
+	right:0px;
+	top:0px;
+	bottom:0px;
+	margin:auto;
+	.letter{
+		padding-top:10px;
+		line-height:28px;
+		text-align:center;
+		font-size:12px;
+	}
+	.info_btn{
+		width:50px;
+		margin:0px auto;
+		height:28px;
+		border:1px solid #ccc;
+		text-align:center;
+		line-height:28px;
+		border-radius:3px;
+		font-size:12px;
+		margin-top:10px;
+	}
+}
+
+.header{
+	width:100%;
+	height:48px;
+	-webkit-flex-shrink:0;
+	box-shadow:0 1px 2px #999;
+	@include pos;
+	a{
+		@include pos(absolute);
+		font-size:20px;
+		color:#000;
+		top:50%;
+		margin-top:-22px;
+		left:2%;
+		font-weight:bold;
+	}
+	h1{
+		padding-left:20px;
+		text-align:center;
+		font-size:20px;
+		color:#000;
+		line-height:48px;
+	}
+}
+
+.main{
+	-webkit-flex-grow:1;
+	overflow-Y:scroll;
+	h3{
+		width:100%;
+		height:32px;
+		padding-left:12px;
+		line-height:40px;
+		font-size:12px;
+		color:#9b9b9b;
+		font-weight:normal;
+		background-color:#f6f6f6;
+		border-top:1px solid #f0f0f0;
+		border-bottom:1px solid #f0f0f0;
+	}
+	.hotelInfo{
+		width:100%;
+		height:auto;
+		padding:12px;
+		dl{
+			width:100%;
+			height:100px;
+			padding:10px;
+			border-bottom:1px solid #ccc;
+			@include flex;
+			dt{
+				height:100%;
+				-webkit-flex-shrink:0;
+				img{
+					height:100%;
+				}
+			}
+			dd{
+				-webkit-flex-grow:1;
+				padding-left:10px;
+				h2{
+					font-size:14px;
+					line-height:28px;
+				}
+				.homeName{
+					font-size:12px;
+					line-height:24px;
+					color:#666;
+				}
+				.homePrice{
+					font-size:16px;
+					line-height:28px;
+					color:#f00;
+
+				}
+			}
+		}
+		.timeInfo{
+			width:100%;
+			height:36px;
+			border-bottom:1px solid #ccc;
+			@include flex;
+			p{
+				-webkit-flex-grow:1;
+				height:24px;
+				margin-top:6px;
+				text-align:center;
+				font-size:14px;
+				line-height:24px;
+				color:#333;
+				span{
+					margin-left:8px;
+				}
+				&:nth-of-type(1){
+					border-right:1px solid #ccc;
+				}
+			}
+		}
+	}
+	.homeInfo{
+		.a{
+			width:100%;
+			height:auto;
+			padding:12px;
+			.homeNum{
+				height:36px;	
+				padding-left:12px;
+				line-height:36px;
+				font-size:14px;
+				border-bottom:1px solid #ccc;
+				a{
+					float:right;
+					span{
+						margin-right:12px;
+					}
+					button{
+						width:20px;
+						height:20px;
+						border:1px solid #ccc;
+						text-align:center;
+						line-height:20px;
+						background:none;
+						outline:none;
+						&:nth-of-type(1)
+						{
+							border-radius:5px 0 0 5px;
+							border-right:none;
+						}
+						&:nth-of-type(2)
+						{
+							border-radius:0 5px 5px 0;
+							border-left:none;
+						}
+					}	
+					input{
+						width:30px;
+						height:20px;
+						-webkit-transform:translate3d(0,-1px,0);
+						border:1px solid #ccc;
+						text-align:center;
+						outline:none;
+					}
+				}
+			}	
+			.homeTime{
+				width:100%;
+				height:36px;
+				line-height:36px;
+				padding-left:12px;
+				font-size:14px;
+				a{	
+					float:right;
+					color:#666;
+					span{
+						margin-right:12px;
+						color:#000;
+						font-size:14px;
+
+					}
+				}
+			}
+		}
+	}
+	.userInfo{
+		.user{
+			width:100%;
+			padding:12px;
+			.userName,.userId{
+				width:100%;
+				height:36px;
+				line-height:36px;
+				border-top:1px solid #ccc;
+				padding-left:12px;
+				line-height:36px;
+				font-size:12px;
+				color:#333;
+				@include flex; 
+				@include pos;
+				input{
+					-webkit-flex-grow:1;
+					padding-left:12px;
+					outline:none;
+					border:none;
+					margin-left:50px;
+					line-height:36px;
+				}
+				span{
+					@include pos(absolute);
+					width:16px;
+					height:16px;
+					border-radius:50%;
+					background-color:#999;
+					color:#fff;
+					text-align:center;
+					line-height:14px;
+					right:2%;
+					top:50%;
+					margin-top:-8px;
+					display:none;
+				}
+			}
+			.userName{
+				&:nth-of-type(1)
+				{
+					border-top:none;
+				}
+			}
+		}	
+	}
+	.linkmanInfo{
+		.linkman{
+			width:100%;
+			padding:12px;
+			.linkmanName,.linkmanTel{
+				width:100%;
+				height:36px;
+				line-height:36px;
+				border-top:1px solid #ccc;
+				padding-left:12px;
+				line-height:36px;
+				font-size:12px;
+				color:#333;
+				@include flex; 
+				@include pos;
+				input{
+					-webkit-flex-grow:1;
+					padding-left:12px;
+					outline:none;
+					border:none;
+					margin-left:20px;
+					line-height:36px;
+				}
+				span{
+					@include pos(absolute);
+					width:16px;
+					height:16px;
+					border-radius:50%;
+					background-color:#999;
+					color:#fff;
+					text-align:center;
+					line-height:14px;
+					right:2%;
+					top:50%;
+					margin-top:-8px;
+					display:none;
+				}
+			}
+			.userName{
+				&:nth-of-type(1)
+				{
+					border-top:none;
+				}
+			}
+		}	
+	}
+	.promptInfo{
+		width:100%;
+		height:auto;
+		background-color:#f6f6f6;
+		padding:12px;
+		h4{
+			font-size:12px;
+			color:#ef503b;
+			line-height:32px;
+			font-weight:normal;
+		}
+		p{
+			font-size:12px;
+			line-height:20px;
+		}
+	}
+	.submitBtns{
+		width:100%;
+		height:44px;
+		.assureBtn{
+			width:60%;
+			height:44px;
+			background-color:#174990;
+			text-align:center;
+			line-height:44px;
+			color:#fff;
+			font-size:14px;
+			border:none;
+			letter-spacing:2px;
+		}
+		.scheduleBtn{
+			width:40%;
+			height:44px;
+			text-align:center;
+			line-height:44px;
+			font-size:14px;
+			background-color:#23aef1;
+			letter-spacing:2px;
+			border:none;
+			color:#fff;
+		}
+	}
+}
